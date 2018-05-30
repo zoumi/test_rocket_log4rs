@@ -26,10 +26,10 @@ use rocket_contrib::Template;
 extern crate log;
 extern crate log4rs;
 
-pub test_mod;
+pub mod test_mod;
 
-#[get("/home")]
-fn home(s_op:Option<Session>) -> String {
+#[get("/")]
+fn home() -> String {
     ::log::debug!("debug");
     ::log::info!("info");
     ::log::warn!("warn");
